@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Registrations - MMDU Utsav 2026</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <h2>MMDU Utsav 2026</h2>
+
+    <div class="nav-links">
+
+        <a href="{{ url_for('home') }}">Home</a>
+
+        <a href="{{ url_for('events') }}">Events</a>
+
+        <a href="{{ url_for('schedule') }}">Schedule</a>
+
+        <a href="{{ url_for('registration') }}">
+            Registration
+        </a>
+
+        <a href="{{ url_for('contact') }}">Contact</a>
+
+    </div>
+
+</nav>
+
+
+<section class="events admin-section">
+
+    <h1>Registration Details</h1>
+
+    <p class="events-intro">
+        All registrations saved in SQLite database.
+    </p>
+
+
+    {% if registrations %}
+
+    <div class="table-container">
+
+        <table>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Name</th>
+
+                <th>Email</th>
+
+                <th>Phone</th>
+
+                <th>Event</th>
+
+                <th>Date & Time</th>
+
+                <th>Action</th>
+
+            </tr>
+
+
+            {% for row in registrations %}
+
+            <tr>
+
+                <td>
+                    #{{ row["id"] }}
+                </td>
+
+                <td>
+                    {{ row["name"] }}
+                </td>
+
+                <td>
+                    {{ row["email"] }}
+                </td>
+
+                <td>
+                    {{ row["phone"] }}
+                </td>
+
+                <td>
+                    {{ row["event"] }}
+                </td>
+
+                <td>
+                    {{ row["registered_at"] }}
+                </td>
+
+                <td>
+
+                    <form
+                        action="{{ url_for(
+                            'delete_registration',
+                            id=row['id']
+                        ) }}"
+                        method="POST"
+                    >
+
+                        <button
+                            type="submit"
+                            class="delete-btn"
+                        >
+                            Delete
+                        </button>
+
+                    </form>
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    {% else %}
+
+    <p class="empty-message">
+        No registrations yet.
+    </p>
+
+    {% endif %}
+
+</section>
+
+
+<footer>
+
+    <h3>MMDU Utsav 2026</h3>
+
+    <p>Celebrate Talent, Create Memories</p>
+
+    <p>© 2026 MMDU Utsav. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

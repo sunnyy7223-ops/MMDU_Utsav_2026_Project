@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Registration - MMDU Utsav 2026</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <h2>MMDU Utsav 2026</h2>
+
+    <div class="nav-links">
+
+        <a href="{{ url_for('home') }}">Home</a>
+
+        <a href="{{ url_for('events') }}">Events</a>
+
+        <a href="{{ url_for('schedule') }}">Schedule</a>
+
+        <a href="{{ url_for('registration') }}">
+            Registration
+        </a>
+        <a href="{{ url_for('registrations') }}">Registrations</a>
+
+        <a href="{{ url_for('contact') }}">Contact</a>
+
+    </div>
+
+</nav>
+
+
+<section class="contact">
+
+    <h1>Event Registration</h1>
+
+    <p class="contact-intro">
+        Register yourself for MMDU Utsav 2026.
+    </p>
+
+
+    <div class="form-box">
+
+        <h2>Register for the Fest</h2>
+
+
+        {% if success %}
+
+        <p class="success-message">
+            {{ success }}
+        </p>
+
+        {% endif %}
+
+
+        {% if error %}
+
+        <p class="error-message">
+            {{ error }}
+        </p>
+
+        {% endif %}
+
+
+        <form action="{{ url_for('register') }}"
+              method="POST">
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+            >
+
+
+            <label for="event">
+                Select Event
+            </label>
+
+            <select
+                id="event"
+                name="event"
+                required
+            >
+
+                <option value="" disabled selected>
+                    Select an event
+                </option>
+
+                {% for event in events %}
+
+                <option value="{{ event }}">
+                    {{ event }}
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+
+            <button type="submit">
+                Register Now
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h3>MMDU Utsav 2026</h3>
+
+    <p>Celebrate Talent, Create Memories</p>
+
+    <p>© 2026 MMDU Utsav. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

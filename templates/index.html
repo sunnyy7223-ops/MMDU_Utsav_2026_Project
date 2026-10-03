@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MMDU Utsav 2026</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>MMDU Utsav 2026</h2>
+
+        <div class="nav-links">
+
+            <a href="{{ url_for('home') }}">Home</a>
+
+            <a href="{{ url_for('events') }}">Events</a>
+
+            <a href="{{ url_for('schedule') }}">Schedule</a>
+
+            <a href="{{ url_for('registration') }}">
+                Registration
+            </a>
+            <a href="{{ url_for('registrations') }}">Registrations</a>
+
+            <a href="{{ url_for('contact') }}">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="welcome">WELCOME TO</p>
+
+            <h1>MMDU Utsav 2026</h1>
+
+            <h3>Celebrate Talent, Create Memories</h3>
+
+            <p>
+                Join us for an exciting college festival filled
+                with music, dance, creativity, technology and fun.
+            </p>
+
+            <div class="fest-info">
+
+                <div>
+                    <strong>📅</strong>
+                    <span>25 November 2026</span>
+                </div>
+
+                <div>
+                    <strong>📍</strong>
+                    <span>MMDU, Ambala</span>
+                </div>
+
+            </div>
+
+            <a href="{{ url_for('events') }}" class="btn">
+                Explore Events
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="about">
+
+        <h2>About The Fest</h2>
+
+        <p>
+            MMDU Utsav 2026 is a college festival organized at
+            Maharishi Markandeshwar Deemed to be University,
+            Ambala, Haryana.
+        </p>
+
+        <div class="details">
+
+            <div>
+                <h3>📅 Date</h3>
+                <p>25 November 2026</p>
+            </div>
+
+            <div>
+                <h3>📍 Location</h3>
+                <p>Ambala, Haryana</p>
+            </div>
+
+            <div>
+                <h3>🎭 Events</h3>
+                <p>6 Exciting Events</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>MMDU Utsav 2026</h3>
+
+        <p>Celebrate Talent, Create Memories</p>
+
+        <p>© 2026 MMDU Utsav. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
