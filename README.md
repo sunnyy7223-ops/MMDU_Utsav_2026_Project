@@ -2,38 +2,39 @@
 
 A college **Event Management System** developed for MMDU Utsav 2026.
 
-The project provides a simple web-based platform where users can explore college events, view the schedule, register for events, and submit contact information.
+This project provides a simple web-based platform where users can explore college events, view schedules, register for events, and submit contact information. Registration details are stored using a SQLite database.
 
-## 🚀 Features
+## ✨ Features
 
-- Home page for MMDU Utsav 2026
-- Events page
-- Event schedule
-- Online event registration
-- SQLite database integration for registrations
-- Registration records page
-- Contact page
-- Responsive and organized frontend
-- Flask backend
+- 🏠 Home page
+- 🎪 Events page
+- 📅 Event schedule
+- 📝 Online event registration
+- 🗄️ SQLite database for registration data
+- 📋 Registration records page
+- 📞 Contact page
+- 📱 Responsive and organized frontend
+- ⚙️ Flask backend
 
 ## 🛠️ Technologies Used
 
-- **Python**
-- **Flask**
-- **SQLite**
-- **HTML5**
-- **CSS3**
-- **Jinja2**
+- Python
+- Flask
+- SQLite
+- HTML5
+- CSS3
+- Jinja2
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
-MMDU_Utsav_2026/
+MMDU_Utsav_2026_Project/
 │
 ├── app.py
 ├── requirements.txt
-├── .gitignore
 ├── README.md
+├── .gitignore
+├── utsav.db
 │
 ├── static/
 │   └── style.css
@@ -43,65 +44,32 @@ MMDU_Utsav_2026/
     ├── events.html
     ├── schedule.html
     ├── registration.html
-    ├── registrations.html
     └── contact.html
-```
 
-> The local SQLite database is intentionally excluded from GitHub using `.gitignore`. This prevents local registration data from being uploaded.
 
-## ▶️ How to Run
+## 🚀 How to Run
 
-### 1. Clone the repository
-
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd MMDU_Utsav_2026
-```
-
-### 2. Create a virtual environment (recommended)
-
-```bash
-python -m venv venv
-```
-
-Activate it on Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-### 3. Install dependencies
+1. Clone or download this repository.
+2. Open the project folder in VS Code.
+3. Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
-```
 
-### 4. Start the Flask application
-
+4. Run the Flask application:
 ```bash
 python app.py
-```
 
-### 5. Open the website
+5. Open the local address shown in the terminal in your web browser.
+🗄️ Database
+The project uses SQLite to store event registration information.
+The database file is:
+utsav.db
 
-Open the local address shown by Flask in your browser, usually:
-
-```text
-http://127.0.0.1:5000/
-```
-
-## 🗄️ Database
-
-The project uses **SQLite** to store event registration information.
-
-The database file is kept local and is not included in the public GitHub repository.
-
-## 🎓 Project Purpose
-
-This project was created as a college project to demonstrate basic web development, Flask backend development, form handling, and database integration.
-
-## 👨‍💻 Author
-
-**MMDU Utsav 2026 Project**
-
-Built as a college Event Management System project.
+🎯 Project Objective
+The main objective of this project is to provide a simple and organized platform for managing college events and registrations digitally.
+👨‍💻 Developer
+Sunny Yadav
+BCA Student
+MMDU
+⭐ If you find this project useful, feel free to explore the repository.
